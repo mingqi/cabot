@@ -10,7 +10,7 @@ graphite_from = settings.GRAPHITE_FROM
 auth = (user, password)
 
 
-def get_data(target_pattern, mins_to_check):
+def get_data(target_pattern, mins_to_check=5):
     until_epoch = int(time.time())
     # calculate epoch time which is 59 seconds of last minutes
     until_epoch = until_epoch - (until_epoch % 60) - 1
